@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lapa2 Landing Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        section {
+            padding: 2rem;
+            text-align: center;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+     #navigacija  {
+    background-color: #666;
+      padding: 12px 0 12px 40px;
+      border-radius: 0 0 10px 10px;
+      box-shadow: 0 2px 8px rgba(60,60,60,0.08);
+      margin-bottom: 24px;
+        }
+
+       #navigacija  a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1em;
+      margin-right: 18px;
+      transition: color 0.2s;
+   }
+  #navigacija a:hover {
+      color: #f8ffae;
+   }
+
+   form {
+   background: rgba(255,255,255,0.9);
+   width: 320px;
+   margin: 40px 0 0 40px;
+   padding: 24px 18px 18px 18px;
+   border-radius: 10px;
+   box-shadow: 0 4px 16px rgba(60,60,60,0.12);
+}
+
+label {
+   display: block;
+   margin-bottom: 10px;
+   font-weight: 500;
+}
+    </style>
+</head>
+<body>
+    <nav id ="navigacija">
+        <a href="Start.html">Home</a>
+    </nav>
+    <header>
+        <h1>Atradi kļūdu?</h1>
+    </header>
+    
+    <form>
+        <h4>Atradi kļūdu? Palīdzi to izlabot</h4>
+    <label for="name">Tavs vārds</label>
+    <input type="text" id="name" name="name" required>
+
+    <br><br>
+                    
+    <label for="surname">Tavs uzvārds</label>
+    <input type="text" id="surname" name="surname" required>
+
+    <br><br>
+
+    <label for="age">Tavs vecums</label>
+    <input type="number" id="age" name="age" min="1" required>
+
+    <br><br>
+
+    <label for="mistake">Apraksti kļūdu</label>
+    <textarea id="mistake" name="mistake" rows="4" required></textarea>
+
+    <br><br>
+
+    <label for="suggestion">Kā būtu pareizi?</label>
+    <textarea id="suggestion" name="suggestion" rows="4" required></textarea>
+
+    <br><br>
+
+    <button type="submit">Iesniegt</button>
+</form>
+    <footer>
+        <p>&copy; 2023 Lapa2. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formas</title>
+    <style>
+
+
+     form {
+   background: rgba(255,255,255,0.9);
+   width: 400px;
+   margin: 40px 0 0 40px;
+   padding: 24px 18px 18px 18px;
+   border-radius: 10px;
+   box-shadow: 0 4px 16px rgba(60,60,60,0.12);
+}
+
+    input[type="button"] {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #21b4f3;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;}
+    input[type="button"]:hover {
+      background-color: #2198f3;}
+  
+  body {text-align:center;}
+        
+    p {margin: 10px 0;}
+
+    input[type="text"],
+    input[type="button"],
+    input[type="reset"] {
+      padding: 10px;
+      margin: 5px 0;
+      border: 2px solid #ccc;
+      border-radius: 5px;}
+
+    input[name="datums"] {
+      width: 350px;
+      font-size: 20px;}
+   
+       #navigacija  {
+    background-color: #666;
+      padding: 12px 0 12px 40px;
+      border-radius: 0 0 10px 10px;
+      box-shadow: 0 2px 8px rgba(60,60,60,0.08);
+      margin-bottom: 24px;
+      text-align: left;
+        }
+
+       #navigacija  a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1em;
+      margin-right: 18px;
+      transition: color 0.2s;
+   }
+  #navigacija a:hover {
+      color: white;
+   }
+    </style>
+</head>
+<body>
+
+   <nav id ="navigacija">
+        <a href="Start.html">Home</a>
+    </nav>
+
+<form>
+      <p>Šodienas datums: <input name="datums" type="text" readonly></p>
+      <p>
+        Kāds šodien datums? Uzspiet pogu DATUMS un uzzināsi
+        <input onclick="datums.value=new Date();" name="poga" value="DATUMS" type="button">
+      </p>
+      <p>
+       Apnika skatīties uz šodienas datumu? Uzspied pogu RESET, lai to izdzēstu
+        <input value="RESET" type="reset">
+      </p>
+</form>
+  <form name="calc">
+      <div>1. skaitlis: <input type="text" name="s1"></div>
+      <div>2. skaitlis: <input type="text" name="s2"></div>
+      <div>
+        <input value="+" onclick="calc.rez.value=Number(calc.s1.value)+Number(calc.s2.value)" type="button">
+        <input value="-" onclick="calc.rez.value=Number(calc.s1.value)-Number(calc.s2.value)" type="button">
+        <input value="X" onclick="calc.rez.value=Number(calc.s1.value)*Number(calc.s2.value)" type="button">
+        <input value="/" onclick="calc.rez.value=Number(calc.s1.value)/Number(calc.s2.value)" type="button">
+        <input value="RESET" type="reset">
+      </div>
+      <div>Rezultāts: <input name="rez" type="text" readonly></div>
+    </form>
+
+
+
+
+</body>
+</html>
+<!--     <p>Šeit ir informācija par Word/Excel.</p>
+ -->
