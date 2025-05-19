@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dzērieni</title>
+    <style>
+
+
+       form {
+   background: rgba(255,255,255,0.9);
+   width: 320px;
+   margin: 40px 0 0 40px;
+   padding: 24px 18px 18px 18px;
+   border-radius: 10px;
+   box-shadow: 0 4px 16px rgba(60,60,60,0.12);
+}
+    input[type="radio"] {
+      margin: 10px; }
+
+    input[type="button"] {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #21b4f3;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;}
+    input[type="button"]:hover {
+      background-color: #2198f3;}
+    #cena {
+      font-weight: bold;
+      margin-left: 15px;}
+  body {text-align:center;}
+
+        #navigacija  {
+    background-color: #666;
+      padding: 12px 0 12px 40px;
+      border-radius: 0 0 10px 10px;
+      box-shadow: 0 2px 8px rgba(60,60,60,0.08);
+      margin-bottom: 24px;
+      text-align: left;
+        }
+
+       #navigacija  a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1em;
+      margin-right: 18px;
+      transition: color 0.2s;
+   }
+  #navigacija a:hover {
+      color: white;
+   }
+    </style>
+</head>
+<body>
+
+ <nav id ="navigacija">
+        <a href="Index.html">Home</a>
+    </nav>
+<form>
+ <h3>Dzērienu izvēle:</h3>
+  <p><input type="radio" id="kafija" name="drink" value="2.00">
+        <label for="kafija">Kafija</label></p>
+<p><input type="radio" id="sula" name="drink" value="1.30">
+        <label for="sula">Sula</label></p>
+<p><input type="radio" id="kakao" name="drink" value="2.20">
+        <label for="kakao">Kakao</label></p>
+<p><input type="radio" id="tēja" name="drink" value="1.00">
+        <label for="tēja">Tēja</label></p>
+<p><input type="button" id="poga" value="Jāmaksā" onclick="izvele()">
+        <span id="cena"></span></p>
+</form>
+<script>
+
+    function izvele(){
+      let dz = document.getElementsByName('drink');
+      for(let i = 0; i < dz.length; i++) {
+         if(dz[i].checked)
+            document.getElementById("cena").innerText = "Cena: " + dz[i].value + " EUR";}}
+</script>
+
+
+</body>
+</html>
